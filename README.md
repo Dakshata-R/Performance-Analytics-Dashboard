@@ -1,4 +1,8 @@
-`
+# Performance Insights Dashboard
+
+## Project Structure
+
+```text
 performance-insights/
 ├── backend/
 │   ├── middleware/
@@ -14,6 +18,7 @@ performance-insights/
 │   ├── .env
 │   ├── package.json
 │   └── server.js
+│
 └── frontend/
     ├── public/
     │   └── index.html
@@ -38,12 +43,16 @@ performance-insights/
     │   ├── index.js
     │   └── index.css
     └── package.json
+```
 
-`
+## Environment Variables
 
+Create a `.env` file inside the backend folder:
 
+```env
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/performance_insights
+```
 
 
 
