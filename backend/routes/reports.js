@@ -6,7 +6,7 @@ const { protect } = require('../middleware/auth');
 router.get('/summary', protect, async (req, res) => {
   try {
     const filter = req.user.role === 'admin' ? {} : { userId: req.user._id };
-    const records = await Performance.find(filter).populate('userId', 'name');
+    const records = await Performance.find(filter).populate({ path: 'userId', select: 'name', options: { strictPopulate: false } });
 
     const totalRecords = records.length;
 
